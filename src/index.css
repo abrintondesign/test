@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: #f5f6f8;
+  --color-card: #ffffff;
+  --color-text-main: #1a1a1a;
+  --color-text-secondary: #6b7280;
+  --color-accent: #2563eb;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-border: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-main antialiased selection:bg-accent selection:text-white font-sans;
+  }
+}
+
+.card {
+  @apply bg-card rounded-[20px] border border-border p-6 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)];
+}
+
+.label {
+  @apply text-[12px] uppercase tracking-wider text-text-secondary font-semibold mb-2;
+}
+
+.big-stat {
+  @apply text-[40px] font-extrabold leading-none;
+}
+
+.status-badge {
+  @apply font-mono px-2 py-1 rounded text-[13px] font-bold w-[45px] text-center;
+}
